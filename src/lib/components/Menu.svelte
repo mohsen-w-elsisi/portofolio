@@ -1,11 +1,12 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import { menuIsOpen, closeMenu } from "$lib/state/menu";
+  import { menuSpeed } from "$lib/globalVariables";
 </script>
 
 {#if $menuIsOpen}
-  <nav on:click={closeMenu} transition:fade>
-
+  <nav on:click={closeMenu} transition:fade={{ duration: menuSpeed }}>
+    
   </nav>
 {/if}
 
