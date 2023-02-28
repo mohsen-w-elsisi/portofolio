@@ -1,13 +1,13 @@
 <script>
-  import Text from "./Text.svelte";
   import { scale } from "svelte/transition";
   import { menuIsOpen, openMenu } from "$lib/state/menu";
   import { menuSpeed } from "$lib/globalVariables";
+  import MenuIcon from "./icons/MenuIcon.svelte";
 </script>
 
 {#if !$menuIsOpen}
   <button on:click={openMenu} transition:scale={{ duration: menuSpeed }}>
-    <Text>hello</Text>
+    <MenuIcon />
   </button>
 {/if}
 
@@ -20,6 +20,8 @@
     position: fixed;
     bottom: 1rem;
     left: 1rem;
+
+    padding: 0.5rem;
 
     /* to circle */
     aspect-ratio: 1 / 1;

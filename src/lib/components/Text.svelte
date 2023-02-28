@@ -1,6 +1,6 @@
-<span>
+<p>
   <slot />
-</span>
+</p>
 
 <style>
   span {
